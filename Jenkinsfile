@@ -32,6 +32,9 @@ pipeline {
     }
 
     stage('Publish') {
+      when {
+        branch 'main'
+      }
       steps {
         echo 'Publishing'
         echo "current branch ${branch}"
