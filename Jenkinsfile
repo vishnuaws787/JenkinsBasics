@@ -47,5 +47,6 @@ pipeline {
   }
   environment {
     builder = 'Linux'
+    branch = 'main'
   }
 }
