@@ -1,1 +1,42 @@
+pipeline {
+  agent any
+  stages {
+    stage('PRFCheckout') {
+      steps {
+        echo 'Checking Out'
+      }
+    }
 
+    stage('PRFBuild') {
+      steps {
+        echo 'Building'
+        echo "Print ${builder}"
+      }
+    }
+
+    stage('Test1') {
+      parallel {
+        stage('Test1') {
+          steps {
+            echo 'Test1'
+          }
+        }
+
+        stage('Test2') {
+          steps {
+            echo 'Test2'
+          }
+        }
+
+      }
+    }
+
+
+
+
+  }
+  environment {
+    builder = 'Linux'
+    branch = 'main'
+  }
+}
