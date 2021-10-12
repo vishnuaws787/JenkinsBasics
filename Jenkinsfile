@@ -34,6 +34,7 @@ pipeline {
     stage('Publish') {
       steps {
         echo 'Publishing'
+        echo 'current branch ${branch}'
       }
     }
 
@@ -47,5 +48,6 @@ pipeline {
   }
   environment {
     builder = 'Linux'
+    branch = 'develop'
   }
 }
