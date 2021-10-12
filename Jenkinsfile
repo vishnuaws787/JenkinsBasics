@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
-        echo '"Print ${Builder}"'
+        echo "Print ${Builder}"
       }
     }
 
