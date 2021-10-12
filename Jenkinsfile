@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
+        echo '"Print ${Builder}"'
       }
     }
 
@@ -37,10 +38,13 @@ pipeline {
     }
 
     stage('Deploy') {
-        steps {
-            echo 'Deploying'
-        }
+      steps {
+        echo 'Deploying'
+      }
     }
 
+  }
+  environment {
+    Builder = 'Linux'
   }
 }
