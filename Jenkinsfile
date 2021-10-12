@@ -34,6 +34,7 @@ pipeline {
     stage('Publish') {
       steps {
         echo 'Publishing'
+        echo 'current branch ${branch}'
       }
     }
 
